@@ -22,7 +22,7 @@ export default function Home() {
             console.log('Logs every minute');
             setpercentToEndOfWorkDayFriday(clamp((diffFromTuesday / diffBetweenMondayWorkdayAndEow) * 100))
         }, 60000);
-        return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+        return () => clearInterval(interval);
     }, []);
 
     return (
