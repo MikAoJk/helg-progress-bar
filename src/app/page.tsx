@@ -1,14 +1,14 @@
-import {add, differenceInSeconds, endOfWeek, intervalToDuration, startOfWeek, Duration} from "date-fns";
-import no from "date-fns/locale/nb";
+import {add, differenceInSeconds, startOfWeek} from "date-fns";
+import {nb} from "date-fns/locale/nb";
 import ProgressBar from "@/components/ProgressBar";
 import React from "react";
 
 export default function Home() {
 
     const now: Date = new Date();
-    const start: Date = startOfWeek(now, { locale: no });
-    const mondayStartOfWorkday: Date = add(start, { hours: 6 });
-    const fridayEndOfWorkDay: Date = add(start, { days: 4, hours: 14 });
+    const start: Date = startOfWeek(now, { locale: nb });
+    const mondayStartOfWorkday: Date = add(start, { hours: 8 });
+    const fridayEndOfWorkDay: Date = add(start, { days: 4, hours: 16 });
     const diffBetweenMondayWorkdayAndEow: number = differenceInSeconds(fridayEndOfWorkDay, mondayStartOfWorkday);
     const diffFromTuesday: number = differenceInSeconds(now, mondayStartOfWorkday);
     const percentToEndOfWorkDayFriday = clamp((diffFromTuesday / diffBetweenMondayWorkdayAndEow) * 100)
