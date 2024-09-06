@@ -15,7 +15,7 @@ const ProgressBar = ({progress, progressText}: ProgressBarProps) => {
                     style={{width: `${progress}%`}}
                 ></div>
             </div>
-            <p>{progress.toFixed(0)}%</p>
+            <p>{progress.toFixed(2)}%</p>
         </div>
     );
 };
