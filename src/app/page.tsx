@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <div className="flex min-h-screen flex-col items-center justify-between md:p-12">
                 <ProgressBar progress={percentToEndOfWorkDayFriday}
-                             progressText={"Prosentprogressjon til helg"}/>
+                             progressText={"Prosent til helg"}/>
             </div>
         </main>
     )
