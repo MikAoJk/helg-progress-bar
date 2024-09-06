@@ -7,8 +7,8 @@ export default function Home() {
 
     const now: Date = new Date();
     const start: Date = startOfWeek(now, { locale: no });
-    const mondayStartOfWorkday: Date = add(start, { hours: 8 });
-    const fridayEndOfWorkDay: Date = add(start, { days: 4, hours: 16 });
+    const mondayStartOfWorkday: Date = add(start, { hours: 6 });
+    const fridayEndOfWorkDay: Date = add(start, { days: 4, hours: 14 });
     const diffBetweenMondayWorkdayAndEow: number = differenceInSeconds(fridayEndOfWorkDay, mondayStartOfWorkday);
     const diffFromTuesday: number = differenceInSeconds(now, mondayStartOfWorkday);
     const percentToEndOfWorkDayFriday = clamp((diffFromTuesday / diffBetweenMondayWorkdayAndEow) * 100)
