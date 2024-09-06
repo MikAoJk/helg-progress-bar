@@ -19,7 +19,6 @@ export default function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log('Logs every minute');
             setpercentToEndOfWorkDayFriday(clamp((diffFromTuesday / diffBetweenMondayWorkdayAndEow) * 100))
         }, 60000);
         return () => clearInterval(interval);
@@ -31,7 +30,7 @@ export default function Home() {
             </div>
             <div className="flex min-h-screen flex-col items-center justify-between md:p-12">
                 <ProgressBar progress={percentToEndOfWorkDayFriday}
-                             progressText={"Hvor mange prosent er det til helg?"}/>
+                             progressText={"Prosentprogressjon til helg"}/>
             </div>
         </main>
     )
