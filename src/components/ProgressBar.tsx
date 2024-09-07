@@ -7,7 +7,7 @@ export type ProgressBarProps = {
 
 const ProgressBar = ({progress, progressText}: ProgressBarProps) => {
     return (
-        <div className="flex flex-col items-center justify-center w-full mx-8 lg:w-1/3">
+        <div className="flex flex-col items-center justify-center w-full mx-20 lg:w-1/3">
             <h1 className="text-2xl lg:text-3xl">{progressText}</h1>
             <div className="mt-6 w-full border-2 border-indigo-700 h-6 rounded-md">
                 <div
