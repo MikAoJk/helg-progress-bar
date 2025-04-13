@@ -31,6 +31,7 @@ export default function Home() {
             <div className="flex min-h-screen flex-col items-center justify-between md:p-12">
                 <ProgressBar progress={percentToEndOfWorkDayFriday}
                              progressText={"Hvor mange prosent helg er det?"}/>
+                <h2>100% helg = Fredag kl 16:00</h2>
             </div>
         </main>
     )
